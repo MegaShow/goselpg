@@ -10,12 +10,12 @@ import (
 func main() {
 	settings, err := command.Parse()
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "error: " + err.Error())
+		fmt.Fprintln(os.Stderr, "error: " + err.Error())
 		os.Exit(2)
 	}
 	err = print.Execute(settings)
 	if err != nil {
-		fmt.Fprintf(os.Stderr, err.Error())
+		fmt.Fprintln(os.Stderr, err.Error())
 		os.Exit(2)
 	}
 }

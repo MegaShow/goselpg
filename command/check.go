@@ -12,6 +12,9 @@ func check(s print.Settings) (err error) {
 	if d.visit["end"] && isPositiveNumber(s.EndPage) == false {
 		return errors.New("end page number cannot be non-positive")
 	}
+	if d.visit["start"] && d.visit["end"] && s.StartPage > s.EndPage {
+		return errors.New("start page number cannot be larger that end page number")
+	}
 	if d.visit["lines"] && isPositiveNumber(s.LinesPerPage) == false {
 		return errors.New("lines cannot be non-positive")
 	}

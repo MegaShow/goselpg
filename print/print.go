@@ -56,7 +56,7 @@ func (p *printer) scan() error {
 			}
 		}
 	}
-	for page := p.StartPage; page <= p.EndPage; page++ {
+	for page := p.StartPage; p.EndPage == 0 || page <= p.EndPage; page++ {
 		if p.FormFeed {
 			str, err := p.reader.ReadSlice('\f')
 			p.data = append(p.data, str...)

@@ -42,7 +42,7 @@ func Parse() (s print.Settings, err error) {
 	pflag.IntVarP(&s.StartPage, "start", "s", d.c.StartPage, "start page number")
 	pflag.IntVarP(&s.EndPage, "end", "e", d.c.EndPage, "end page number (default max-page)")
 	pflag.IntVarP(&s.LinesPerPage, "lines", "l", d.c.LinesPerPage, "lines per page")
-	pflag.BoolVarP(&s.FormFeed, "formFeed", "f", d.c.FormFeed, "fixed lines per page")
+	pflag.BoolVarP(&s.FormFeed, "formFeed", "f", d.c.FormFeed, "form feed per page")
 	pflag.StringVarP(&s.Destination, "dest", "d", d.c.Destination, "destination")
 
 	pflag.Parse()
