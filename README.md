@@ -28,7 +28,13 @@ Selpg没有强制选项，只包含可选选项和限制选项。
 下面为一些选项的简单用法。
 
 ```sh
+$ selpg -s12 -e13 -l2
 
+$ selpg -s12 -l2 input.txt
+
+$ selpg -s12 -e12 -f input.txt
+
+$ selpg -s12 -e12 -dlp1 input.txt
 ```
 
 其中最后一条命令相当于：
